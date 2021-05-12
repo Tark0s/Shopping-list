@@ -1,0 +1,34 @@
+body {
+  background-image: linear-gradient(
+    to right top,
+    rgb(70, 70, 70),
+    rgb(100, 100, 100)
+  );
+  background-attachment: fixed;
+  padding: 10vw;
+  color: white;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+#root {
+  border-radius: 10px;
+  border: 3px solid rgb(143, 143, 143);
+  width: 40vw;
+  text-align: center;
+}
+button {
+  border-radius: 20%;
+  margin-right: 10px;
+  cursor: pointer;
+  font-size: 20px;
+}
+ul {
+  list-style: none;
+  padding-inline-start: 0;
+}
+li {
+  font-weight: bold;
+  margin-bottom: 8px;
+}
