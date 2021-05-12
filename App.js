@@ -1,8 +1,8 @@
 const Person = (props) => {
   return (
     <li>
-      <button onClick={props.delete}>-</button>
       <span>{props.name}</span>
+      <button onClick={props.delete}>-</button>
     </li>
   );
 };
