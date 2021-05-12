@@ -2,13 +2,30 @@ const Person = (props) => {
   return (
     <li>
       <span>{props.name}</span>
-      <button onClick={props.delete}>-</button>
+      <button onClick={props.delete}>X</button>
     </li>
+  );
+};
+const NewProduct = (props) => {
+  return (
+    <>
+      <section>
+        <input
+          value={props.value}
+          placeholder="new product"
+          onChange={props.change}
+          type="text"
+        />
+        <button onClick={props.add}>Add product</button>
+      </section>
+    </>
   );
 };
 
 class List extends React.Component {
   state = {
+    AddValue: "",
+
     products: [
       {
         id: 1,
@@ -50,6 +67,18 @@ class List extends React.Component {
       products,
     });
   }
+  handleAdd() {
+    let products = [...this.state.products];
+    products.concat(this.state.AddValue);
+    this.setState({
+      products,
+    });
+  }
+  handleInputChange = (e) => {
+    this.setState({
+      AddValue: e.target.value,
+    });
+  };
 
   render() {
     return (
@@ -65,6 +94,12 @@ class List extends React.Component {
               ))
             : "Wszystko masz już w koszyku!"}
         </ul>
+        <hr />
+        <NewProduct
+          add={this.handleAdd.bind(this)}
+          change={this.handleInputChange}
+          value={this.state.AddValue}
+        />
       </>
     );
   }

@@ -11,17 +11,19 @@ body {
   display: flex;
   align-items: center;
   flex-direction: column;
+  font-family: "Nunito", sans-serif;
 }
 #root {
   border-radius: 10px;
   border: 3px solid rgb(143, 143, 143);
   text-align: center;
 }
-button {
+li button {
   border-radius: 20%;
   margin-left: 10px;
   cursor: pointer;
-  font-size: 20px;
+  font-size: 13px;
+  background-color: rgba(177, 25, 25, 0.637);
 }
 ul {
   list-style: none;
@@ -41,5 +43,16 @@ li {
 }
 li:hover {
   background-color: rgba(32, 219, 32, 0.513);
-  color: rgb(196, 255, 1);
+  color: rgb(94, 255, 1);
+}
+input {
+  padding: 10px;
+  margin: 20px;
+  outline: none;
+  background-color: rgba(78, 78, 78, 0.356);
+}
+section button {
+  padding: 10px;
+  border-radius: 10px;
+  font-weight: bold;
 }
